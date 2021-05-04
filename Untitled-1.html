@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery Assignment-2</title>
+        <style>
+        	h1{
+        		color:rgb(0,0,139);
+        	}
+            ul {
+            list-style-type: none;
+            margin: 0;
+           overflow:hidden;
+            background-color: green;
+            }
+            li {
+            float: right;
+            }
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            }
+            li a:hover {
+            background-color: #111;
+            }
+            form {
+            height: 170px;
+            background-color: rgb(69.8%, 67.5%, 53.3%);
+            color: rgb(25, 44, 109);
+            padding: 20px 40px;
+            }
+            p {
+            color:rgb(0,0,139);
+            }
+            button{
+            	width: 100px;
+            	height: 20px;
+            	background-color: red;
+
+            }
+        </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+            $("form").hide();
+        $("#1").click(function(){
+            $("form").slideUp();
+            $("#A").slideDown();
+            $("#b").click(function(){
+                var value = $("#num").val();
+                value=value*0.014;
+                $("#w").html(`<br> <br> ₹`+value);
+            });
+
+        });
+        $("#2").click(function(){
+            $("form").hide();
+            $("#B").fadeIn();
+            $("h2").animate({left: '250px'});
+            $("#b1").click(function(){
+                var value = $("#num1").val();
+                value=value*73.87;                
+                $("#w1").html(`<br> <br> $`+value);
+            });
+        });
+        $("#3").click(function(){
+            $("form").hide();
+            $("#C").slideDown();
+            $("#b2").click(function(){
+                var value = $("#num2").val();
+                value=value*0.0097;
+                $("#w2").html(`<br> <br> £`+value);
+            });
+        });
+        $("#4").click(function(){
+            $("form").fadeOut();
+            $("#D").slideDown();
+            $("#b3").click(function(){
+                var value = $("#num3").val();
+                value=value*102.86;
+                $("#w3").html(`<br> <br> ₹`+value);
+            });
+        });
+        $("#5").click(function(){
+            $("form").hide();
+            $("#E").slideDown();
+            $("#b4").click(function(){
+                var value = $("#num4").val();
+                value=value*1.01;
+                $("#w4").html(`<br> <br> ₽`+value);
+            });
+        });
+        $("#6").click(function(){
+            $("form").slideUp();
+            $("#F").fadeIn();
+            $("#b5").click(function(){
+                var value = $("#num5").val();
+                value=value*5.23;
+                $("#w5").html(`<br> <br>$`+value);
+            });
+        });
+        $("#7").click(function(){
+            $("form").slideUp();
+            $("#G").fadeIn();
+            $("#b6").click(function(){
+                var value = $("#num6").val();
+                value=value*4270362;
+                $("#w6").html(`<br> <br> ₹`+value);
+            });
+        });
+        });
+
+       
+    </script> 
+</head>
+<body>
+    <h1>JQuery Assignment 2</h1>
+    <p>
+        Design a web page with multiple forms for currency conversion, but show on only one which is selected from horizontal menu. Menu should have option for mutiple currency conversion. use different animation for show different forms. 
+    </p>
+
+<ul>
+    <li><a id="1">INR TO USD</a></li>
+    <li><a id="2">USD TO INR</a></li>
+    <li><a id="3">INR TO POUND</a></li>
+    <li><a id="4">POUND TO INR</a></li>
+    <li><a id="5">INR TO RUBLE</a></li>
+    <li><a id="6">INR TO SGD</a></li>
+    <li><a id="7">BITCOIN TO INR</a></li>
+
+</ul>
+<form action="" id="A">
+    <h2>INR TO USD</h2><input id="num"><button type="button" id="b">Calculate</button>
+    <b id="w"></b>
+
+</form>
+<form action="" id="B">
+    <h2>USD TO INR:</h2><input id="num1"><button type="button" id="b1">Calculate</button>
+    <b id="w1"></b>
+
+    
+</form>
+<form action="" id="C">
+    <h2>INR TO POUND:</h2><input id="num2"><button type="button" id="b2">Calculate</button>
+    <b id="w2"></b>
+
+
+</form>
+<form action="" id="D">
+    <h2>POUND TO INR:</h2><input id="num3"><button type="button" id="b3">Calculate</button>
+    <b id="w3"></b>
+
+
+</form>
+<form action="" id="E">
+    <h2>INR TO RUBLE:</h2><input id="num4"><button type="button" id="b4">Calculate</button>
+    <b id="w4"></b>
+
+
+</form>
+<form action="" id="F">
+    <h2>INR TO SGD</h2><input id="num5"><button type="button" id="b5">Calculate</button>
+    <b id="w5"></b>
+</form>
+<form action="" id="G">
+    <h2>₿ TO INR:</h2><input id="num6"><button type="button" id="b6">Calculate</button>
+    <b id="w6"></b>
+</form>
+
+</body>
+<br>
+</html>
